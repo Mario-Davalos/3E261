@@ -1,0 +1,62 @@
+class Marine_Rojo
+class Punos
+class Pistola
+class Escopeta
+class Super_Escopeta
+class Chaingun
+class Lanzacohetes
+class Plasma_Gun
+class Municion_Balas
+class Municion_Escopeta
+class Celulas_Energia
+class Cohetes
+class Botiquin_Pequeno
+class Botiquin_Grande
+class Armadura_Verde
+class Armadura_Azul
+class Berserk
+class Invulnerabilidad
+class Dano_Aumentado
+class Zombieman
+class Shotgun_Guy
+class Imp
+class Demon_Pinkie
+class Lost_Soul
+class Cacodemon
+class Hell_Knight
+class Baron_of_Hell
+class Arachnotron
+class Cyberdemon
+Marine_Rojo *-- Punos
+Marine_Rojo *-- Pistola
+Marine_Rojo *-- Escopeta
+Marine_Rojo *-- Super_Escopeta
+Marine_Rojo *-- Chaingun
+Marine_Rojo *-- Lanzacohetes
+Marine_Rojo *-- Plasma_Gun
+Marine_Rojo 0-- Botiquin_Pequeno
+Marine_Rojo 0-- Botiquin_Grande
+Marine_Rojo 0-- Armadura_Verde
+Marine_Rojo 0-- Armadura_Azul
+Marine_Rojo 0-- Berserk
+Marine_Rojo 0-- Invulnerabilidad
+Marine_Rojo 0-- Dano_Aumentado
+Pistola 0-- Municion_Balas
+Chaingun 0-- Municion_Balas
+Escopeta 0-- Municion_Escopeta
+Super_Escopeta 0-- Municion_Escopeta
+Plasma_Gun 0-- Celulas_Energia
+Lanzacohetes 0-- Cohetes
+Zombieman --> Marine_Rojo
+Shotgun_Guy --> Marine_Rojo
+Imp --> Marine_Rojo
+Demon_Pinkie --> Marine_Rojo
+Lost_Soul --> Marine_Rojo
+Cacodemon --> Marine_Rojo
+Hell_Knight --> Marine_Rojo
+Baron_of_Hell --> Marine_Rojo
+Arachnotron --> Marine_Rojo
+Cyberdemon --> Marine_Rojo
+Cyberdemon *-- Lanzacohetes
+Shotgun_Guy *-- Escopeta
+Baron_of_Hell --> Hell_Knight
