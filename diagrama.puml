@@ -1,0 +1,98 @@
+@startuml diagrama
+class Personaje {
+  - salud
+}
+class Marine_Rojo {
+  - Arma arma[]
+  - Municion municion[]
+  - Item inventario[]
+  - armadura
+  + disparar(Arma)
+  + recoger(Item)
+}
+class Enemigo {
+  - dano
+  + atacar(Marine_Rojo)
+}
+class Arma {
+  - Municion tipoMunicion
+  - dano
+  + disparar()
+}
+class Municion {
+  - cantidad
+}
+class Item {
+  - beneficio
+  + aplicarEfecto(Marine_Rojo)
+}
+class Punos
+class Pistola
+class Escopeta
+class Super_Escopeta
+class Chaingun
+class Lanzacohetes
+class Plasma_Gun
+class Municion_Balas
+class Municion_Escopeta
+class Celulas_Energia
+class Cohetes
+class Botiquin_Pequeno
+class Botiquin_Grande
+class Armadura_Verde
+class Armadura_Azul
+class Berserk
+class Invulnerabilidad
+class Dano_Aumentado
+class Zombieman
+class Shotgun_Guy
+class Imp
+class Demon_Pinkie
+class Lost_Soul
+class Cacodemon
+class Hell_Knight
+class Baron_of_Hell
+class Arachnotron
+class Cyberdemon
+Marine_Rojo         --|> Personaje
+Enemigo             --|> Personaje
+Pistola             --|> Arma
+Escopeta            --|> Arma
+Super_Escopeta      --|> Arma
+Chaingun            --|> Arma
+Lanzacohetes        --|> Arma
+Plasma_Gun          --|> Arma
+Punos               --|> Arma
+Municion_Balas      --|> Municion
+Municion_Escopeta   --|> Municion
+Celulas_Energia     --|> Municion
+Cohetes             --|> Municion
+Zombieman           --|> Enemigo
+Shotgun_Guy         --|> Enemigo
+Imp                 --|> Enemigo
+Demon_Pinkie        --|> Enemigo
+Lost_Soul           --|> Enemigo
+Cacodemon           --|> Enemigo
+Hell_Knight         --|> Enemigo
+Baron_of_Hell       --|> Enemigo
+Arachnotron         --|> Enemigo
+Cyberdemon          --|> Enemigo
+Botiquin_Pequeno    --|> Item
+Botiquin_Grande     --|> Item
+Armadura_Verde      --|> Item
+Armadura_Azul       --|> Item
+Berserk             --|> Item
+Invulnerabilidad    --|> Item
+Dano_Aumentado      --|> Item
+Marine_Rojo  "1" *-- "1..*" Arma
+Marine_Rojo  "1" o-- "0..*" Municion
+Enemigo      "1..*" --> "1" Marine_Rojo : ataca
+
+Pistola          ..> Municion_Balas : usa
+Escopeta         ..> Municion_Escopeta : usa
+Super_Escopeta   ..> Municion_Escopeta : usa
+Chaingun         ..> Municion_Balas : usa
+Lanzacohetes     ..> Cohetes : usa
+Plasma_Gun       ..> Celulas_Energia : usa
+
+@enduml
